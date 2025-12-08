@@ -28,19 +28,15 @@ div.container {
 }
 .site-header {
   border-bottom: 2px solid #999;
+  margin-bottom: 20px;
 }
 .site-footer {
   margin-top: 20px;
   border-top: 2px solid #999;
 }
-article.post {
-  border-bottom: 2px dashed #bbb;
-}
-article.post:last-of-type {
-  border-bottom: none;
-}
 .site-header ul,
 .site-footer ul {
+  padding: 0px;
   list-style: none;
   display: flex;
   align-items: center;
@@ -79,4 +75,12 @@ article.page h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.single-content {
+  display: block;
 }
