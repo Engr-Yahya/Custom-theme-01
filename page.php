@@ -1,20 +1,8 @@
-<?php
+<?php get_header(); ?>
 
-get_header();
+<div class="single-post ">
+  <h1><?php the_title(); ?></h1>
+  <div><?php the_content(); ?></div>
+</div>
 
-if (have_posts()) {
-  while (have_posts()) {
-    the_post(); ?>
-    <article class="post">
-      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h2>
-      <?php the_content(); ?>
-    </article>
-    <?php
-  }
-} else {
-  echo '<p>No Content Found </p>';
-}
-
-get_footer();
-
-?>
+<?php get_footer(); ?>

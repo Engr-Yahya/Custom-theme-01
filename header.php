@@ -10,7 +10,7 @@
 
 <body <?php body_class(); ?>>
 
-  <div class="container">
+  <div class="container"> <!-- start container -->
     <header class="site-header">
       <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
       <p><?php bloginfo('description'); ?></p>
@@ -23,9 +23,10 @@
         ];
         ?>
 
-
         <?php wp_nav_menu($array); ?>
 
       </nav>
 
     </header>
+
+    <body>

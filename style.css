@@ -70,3 +70,13 @@ article.post:last-of-type {
   padding-right: 10px;
   border-right: 1px dashed #bbb;
 }
+article.page h2 {
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-size: 36px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
