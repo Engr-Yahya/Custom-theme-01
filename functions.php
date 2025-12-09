@@ -2,7 +2,7 @@
 
 function theme_support()
 {
-  add_theme_support('post_thumbnails');
+  add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'theme_support');
 
@@ -18,3 +18,8 @@ register_nav_menus([
   'primary' => 'Primary Menu',
   'footer' => 'Footer Menu',
 ]);
+function click()
+{
+  echo "<h1>Hlw you clicked the button </h1";
+}
+// add_action('init', 'click');

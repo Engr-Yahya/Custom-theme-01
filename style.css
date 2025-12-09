@@ -42,11 +42,9 @@ div.container {
   align-items: center;
   gap: 20px;
 }
-.site-header ul li {
-  border: 1px solid #bbb;
-}
 .site-header ul li a:link,
 .site-header ul li a:visited {
+  border: 1px solid #bbb;
   padding: 10px 18px;
   display: block;
   font-weight: 700;
@@ -61,6 +59,11 @@ div.container {
   background-color: #006ec3;
   color: #fff !important;
 }
+.bread-crumb {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
 .site-footer ul li a:link,
 .site-footer ul li a:visited {
   padding-right: 10px;
@@ -71,16 +74,35 @@ article.page h2 {
   letter-spacing: -1px;
   font-size: 36px;
 }
+.center-div {
+  margin: 20px auto;
+  text-align: center;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+.btn {
+  margin: 20px;
+  text-align: center;
+}
+button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  background-color: #006ec3;
+  color: #fff;
+  font-weight: 600;
 }
 .pagination {
   text-align: center;
   margin-top: 20px;
   font-size: 16px;
 }
-.single-content {
+.single-post .btn {
+  display: none;
+}
+.single-post {
   display: block;
 }
