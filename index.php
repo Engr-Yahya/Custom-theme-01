@@ -9,6 +9,7 @@ get_header(); ?>
     while (have_posts()) {
       the_post(); ?>
       <article class="post">
+
         <img class="thumb-img" src="<?php the_post_thumbnail_url(); ?>" alt="thumbnail image" />
         <div class="media">
           <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h2>

@@ -1,5 +1,10 @@
 <?php
 get_header(); ?>
+<?php $news = get_terms([
+  'taxonomy' => 'news-category'
+]);
+print_r($news);
+?>
 
 <div class="center-div grid">
   <?php
@@ -15,6 +20,7 @@ get_header(); ?>
       $wp_query->the_post();
       global $post;
       ?>
+
       <!-- <a class="article" href="<?php the_permalink(); ?>"> -->
       <article class="post">
         <img class="thumb-img" src="<?php the_post_thumbnail_url(); ?>" alt="thumbnail image" />
