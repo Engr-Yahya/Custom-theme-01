@@ -21,9 +21,6 @@ get_header(); ?>
     echo '<p>No Content Found </p>';
   } ?>
 </div>
-<div class="btn">
-  <button onclick="<?php click(); ?>">View All Posts</button>
-</div>
 <div class="pagination">
   <?php
   the_posts_pagination();

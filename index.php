@@ -4,16 +4,10 @@ get_header(); ?>
 
 <div class="center-div grid">
   <?php
-  $paged = get_query_var('paged', 1);
-  $wp_query = new Wp_Query([
-    'post_type' => 'post',
-    'posts_per_page' => 6,
-    'paged' => $paged,
-  ]);
 
-  if ($wp_query->have_posts()) {
-    while ($wp_query->have_posts()) {
-      $wp_query->the_post(); ?>
+  if (have_posts()) {
+    while (have_posts()) {
+      the_post(); ?>
       <article class="post">
         <img class="thumb-img" src="<?php the_post_thumbnail_url(); ?>" alt="thumbnail image" />
         <div class="media">
@@ -29,9 +23,6 @@ get_header(); ?>
   }
   wp_reset_postdata();
   ?>
-</div>
-<div class="btn">
-  <button type="submit">View All Posts</button>
 </div>
 <div class="pagination">
   <?php
