@@ -1,10 +1,20 @@
 <?php
 get_header(); ?>
 <?php $news = get_terms([
-  'taxonomy' => 'news-category'
+  'taxonomy' => 'news-category',
+  'hide_empty' => false,
+  'orderby' => 'name',
+  'order' => 'Des'
 ]);
-print_r($news);
-?>
+
+foreach ($news as $newsData) {
+
+  $taxonomy_img = get_taxonomy_image($newsData->term_id);
+
+  if ($taxonomy_img) {
+    echo '<img src="' . esc_url($taxonomy_img) . '" alt="' . esc_attr($newsData->name) . '">';
+  }
+} ?>
 
 <div class="center-div grid">
   <?php
