@@ -1,20 +1,25 @@
 <?php
 get_header(); ?>
-<?php $news = get_terms([
+<?php
+$news = get_terms([
   'taxonomy' => 'news-category',
   'hide_empty' => false,
   'orderby' => 'name',
-  'order' => 'Des'
+  'order' => 'DESC',
+  'parent' => 0,
 ]);
 
-foreach ($news as $newsData) {
-
-  $taxonomy_img = get_taxonomy_image($newsData->term_id);
-
+foreach ($news as $newsData) { ?>
+  <h1><?php echo $newsData->name ?></h1>
+  <a href="<?php echo esc_url(get_term_link($newsData)); ?>">Click Here!</a>
+  <?php $taxonomy_img = get_taxonomy_image($newsData->term_id);
   if ($taxonomy_img) {
     echo '<img src="' . esc_url($taxonomy_img) . '" alt="' . esc_attr($newsData->name) . '">';
   }
-} ?>
+
+}
+?>
+
 
 <div class="center-div grid">
   <?php

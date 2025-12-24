@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php
+get_header();
+?>
 
 <div class="single-page">
   <h1><?php the_title(); ?></h1>
